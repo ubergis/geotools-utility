@@ -1,13 +1,9 @@
 package com.ubergis.postgis;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.opengis.referencing.FactoryException;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Date;
 
 public class App {
@@ -26,12 +22,12 @@ public class App {
 
         //=====================================重构后===========================================================
         Date date = new Date();
-        File file = new File("D:\\Java\\geotools-postgis\\geotools-postgis\\src\\main\\resources\\a.geojson");
+        File file = new File("D:\\Java\\ubergis\\geotools-utility\\src\\main\\resources\\a.geojson");
         Vector vector = new Vector();
         vector.setVectorid("123456790");
         vector.setVectorTableName("sw_cesium");
         System.out.println(vector.toString());
-        PostgisUtility.getFieldsOfShp("D:\\Java\\geotools-postgis\\geotools-postgis\\src\\main\\resources\\test\\test.shp");
+        PostgisUtility.getFieldsOfShp("D:\\Java\\ubergis\\geotools-utility\\src\\main\\resources\\test\\test.shp");
         long sec = new Date().getTime() - date.getTime();
         System.out.println(sec);
     }
