@@ -17,6 +17,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <geotools.version>28.2</geotools.version>
         <postgresql.version>42.1.4</postgresql.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <jackson.version>2.13.4</jackson.version>
     </properties>
 
     <!-- 使用 aliyun 的 Maven 源，提升下载速度 -->
@@ -85,6 +87,31 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-shapefile</artifactId>
             <version>${geotools.version}</version>
@@ -94,11 +121,6 @@
             <artifactId>gt-swing</artifactId>
             <version>${geotools.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql.version}</version>
-        </dependency>-->
         <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-main</artifactId>
