@@ -19,6 +19,7 @@
         <postgresql.version>42.1.4</postgresql.version>
         <fastjson.version>1.2.83</fastjson.version>
         <jackson.version>2.13.4</jackson.version>
+        <org.json.version>20200518</org.json.version>
     </properties>
 
     <!-- 使用 aliyun 的 Maven 源，提升下载速度 -->
@@ -92,6 +93,11 @@
             <version>${fastjson.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${org.json.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
@@ -149,6 +155,11 @@
         <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-geotiff</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-graph</artifactId>
             <version>${geotools.version}</version>
         </dependency>
         <dependency>
